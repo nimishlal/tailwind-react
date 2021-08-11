@@ -12,10 +12,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run tailwind:css && react-scripts start",
+    "build": "npm run tailwind:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +37,8 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7"
   }
 }
